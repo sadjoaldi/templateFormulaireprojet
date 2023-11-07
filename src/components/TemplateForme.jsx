@@ -15,14 +15,14 @@ const TemplateForme = () => {
         "service_pyao76w",
         "template_ct4t8ym",
         form.current,
-        "gOYza52hrM6cLGDx2"
+        process.env.REACT_APP_ID
       )
       .then(
         (result) => {
           console.log(result.text);
           //pour remettre à zero le formulaire:
           form.current.reset();
-          formMessage.innerHTML = "<p classe='succes'> Message envoyé ! </p>";
+          formMessage.innerHTML = "<p classe='success'> Message envoyé ! </p>";
           //pour faire disparaitre la notification du message envoyé:
           setTimeout(() => {
             formMessage.innerHTML = "";
